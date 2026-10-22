@@ -1,0 +1,28 @@
+version = "1.0"
+
+[task]
+name = "yared/crash-safe-kv"
+description = "Implement a durable crash-recoverable append-only key-value store with WAL semantics."
+authors = [{ name = "Yared Abera", email = "yaredoabera@gmail.com" }]
+
+[metadata]
+author_name = "Yared Abera"
+author_email = "yaredoabera@gmail.com"
+difficulty = "hard"
+category = "systems"
+tags = ["python", "storage", "wal", "durability", "crash-recovery"]
+
+[agent]
+timeout_sec = 72000.0
+user = "agent"
+
+[verifier]
+timeout_sec = 1800.0
+user = "root"
+
+[environment]
+build_timeout_sec = 600.0
+cpus = 2
+memory_mb = 4096
+storage_mb = 10240
+allow_internet = false
